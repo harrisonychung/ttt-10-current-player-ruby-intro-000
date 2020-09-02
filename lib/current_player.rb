@@ -3,7 +3,7 @@ def turn_count(board)
   turns = 0
   board.each do |space_on_board|
     if space_on_board == "X" || space_on_board == "O"
-      turn += 1
+      turns += 1
     end
   end
   return
@@ -11,7 +11,7 @@ end
 
 #currnet_player method
 def current_player(board)
- turn = turn_count(board)
+ turns = turn_count(board)
  if turn % 2 == O
    return "X"
  else
